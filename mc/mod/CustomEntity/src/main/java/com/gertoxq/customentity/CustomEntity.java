@@ -1,5 +1,6 @@
 package com.gertoxq.customentity;
 
+import com.gertoxq.customentity.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,6 +21,8 @@ public class CustomEntity {
 
     public CustomEntity() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
