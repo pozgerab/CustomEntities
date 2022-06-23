@@ -1,4 +1,4 @@
 { "animation": {
-"frametime": 2,
-"farmes": [{"index":0,"time":60},1,2,3]
+"frametime": 80,
+"frames": [{"index":0,"time":60},1,2,3]
 } }
