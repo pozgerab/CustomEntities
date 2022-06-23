@@ -20,7 +20,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LIGTH_STONE = registerBlock("light_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3f).requiresCorrectToolForDrops().speedFactor(1.5f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    .strength(3f).requiresCorrectToolForDrops().speedFactor(0.8f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -31,7 +31,7 @@ public class ModBlocks {
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
 
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModCreativeTab.CUSTOM_TAB)));
     }
 
     public static void register(IEventBus eventBus) {
