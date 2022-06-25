@@ -10,9 +10,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Customentities extends JavaPlugin {
 
-    Customentities plugin;
+    static Customentities plugin;
 
-    public Customentities getPlugin() {
+    public static Customentities getPlugin() {
         return plugin;
     }
 
