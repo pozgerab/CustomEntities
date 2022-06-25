@@ -1,0 +1,4 @@
+name: Customentities
+version: '${project.version}'
+main: com.gertoxq.customentities
+api-version: 1.19
