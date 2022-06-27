@@ -1,5 +1,0 @@
-name: CustomEntitiesPlugin
-version: '${project.version}'
-main: com.gertoxq.customentities.customentities
-api-version: 1.18
-authors: [ Gertoxq ]
