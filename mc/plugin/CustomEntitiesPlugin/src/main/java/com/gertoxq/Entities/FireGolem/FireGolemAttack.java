@@ -13,7 +13,7 @@ public class FireGolemAttack implements Listener {
         LivingEntity source = (LivingEntity) e.getDamager();
         if (target.getClass() == FireGolem.class) {
 
-            ((FireGolem) target).setTarget(source);
+            ((FireGolem) target).setTarget((net.minecraft.world.entity.LivingEntity) source);
 
             Location targetLoc = target.getLocation();
             Location sourceLoc = source.getLocation();

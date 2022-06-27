@@ -2,6 +2,8 @@ package com.gertoxq;
 
 import com.gertoxq.Entities.FireGolem.FireGolem;
 import net.minecraft.advancements.critereon.EnchantedItemTrigger;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.Level;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -20,7 +22,8 @@ public final class Customentities extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         World world = Bukkit.getWorlds().get(0);
-        world.spawn(new Location(world,0,0,0), FireGolem.class);
+        FireGolem fireGolem = new FireGolem(EntityType.IRON_GOLEM,(Level) world);
+        ((Level) world).addFreshEntity(fireGolem);
         // Plugin startup logic
 
     }
